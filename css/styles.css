@@ -209,6 +209,8 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin: 0;
+    padding-top: env(safe-area-inset-top, 0);  /* iOS notch safety */
 }
 
 .hero-video-container {
@@ -221,17 +223,23 @@ img {
 }
 
 .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 0;
 }
 
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(
         135deg,
         rgba(168, 181, 160, 0.4) 0%,
@@ -239,6 +247,7 @@ img {
         rgba(232, 220, 196, 0.4) 100%
     );
     z-index: 2;
+    pointer-events: none;  /* Prevents blocking interactions */
 }
 
 .hero-content {
@@ -958,8 +967,23 @@ section {
         text-align: center;
     }
 
+    /* Mobile Hero - Portrait Mode */
     .hero {
-        min-height: 500px;
+        height: 66.67vw;              /* Maintains 1.5:1 aspect ratio */
+        min-height: 250px;            /* Minimum usable height */
+        max-height: 400px;            /* Prevents excessive height */
+    }
+
+    .hero-video-container {
+        padding-top: env(safe-area-inset-top, 0);  /* iOS notch safety */
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.3);  /* 30% black overlay for mobile */
+    }
+
+    .hero-content {
+        padding-top: 32px;  /* Shifted down to avoid header overlap */
     }
 
     .hero-ctas {
@@ -1000,6 +1024,15 @@ section {
 
     .scroll-indicator {
         display: none;
+    }
+}
+
+/* Mobile Landscape - Full viewport height */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        height: 100vh;                /* Full viewport height in landscape */
+        min-height: 300px;
+        max-height: 100vh;
     }
 }
 
