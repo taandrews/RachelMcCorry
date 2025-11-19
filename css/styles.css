@@ -981,8 +981,8 @@ section {
     /* Mobile Hero - Portrait Mode */
     .hero {
         height: 66.67vw;              /* Maintains 1.5:1 aspect ratio */
-        min-height: 250px;            /* Minimum usable height */
-        max-height: 400px;            /* Prevents excessive height */
+        min-height: 400px;            /* Increased minimum height for text visibility */
+        max-height: 500px;            /* Increased to accommodate content */
     }
 
     .hero-video-container {
@@ -990,25 +990,32 @@ section {
     }
 
     .hero-overlay {
-        background: rgba(0, 0, 0, 0.3);  /* 30% black overlay for mobile */
+        background: rgba(0, 0, 0, 0.5);  /* Increased to 50% for better text visibility */
     }
 
     .hero-content {
         padding: 1rem;
         max-width: 100%;
-        margin-top: 32px;  /* Shifted down to avoid header overlap */
+        margin-top: 0;  /* Removed shift, center vertically instead */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-title {
-        font-size: clamp(1.75rem, 8vw, 2.5rem);
-        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 0.75rem;
         line-height: 1.2;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        font-weight: 500;
     }
 
     .hero-subtitle {
-        font-size: clamp(0.9rem, 4vw, 1.1rem);
-        margin-bottom: 1.5rem;
+        font-size: clamp(0.85rem, 3.5vw, 1rem);
+        margin-bottom: 1.25rem;
         line-height: 1.4;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     }
 
     .hero-ctas {
