@@ -294,28 +294,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ============================
-    // Video Lazy Loading & Optimization
+    // Video Lazy Loading & Mobile Optimization
     // ============================
     const heroVideo = document.querySelector('.hero-video');
 
     if (heroVideo) {
-        // Pause video when not in viewport (performance optimization)
-        const videoObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    heroVideo.play();
-                } else {
-                    heroVideo.pause();
-                }
+        // Check if device is mobile
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const isSlowConnection = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
+
+        // Only load video on desktop or fast connections
+        if (!isMobile && !isSlowConnection) {
+            // Pause video when not in viewport (performance optimization)
+            const videoObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        heroVideo.play();
+                    } else {
+                        heroVideo.pause();
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            videoObserver.observe(heroVideo);
+
+            // Ensure video plays on load
+            heroVideo.play().catch(error => {
+                console.log('Video autoplay prevented:', error);
             });
-        }, { threshold: 0.25 });
-
-        videoObserver.observe(heroVideo);
-
-        // Ensure video plays on load
-        heroVideo.play().catch(error => {
-            console.log('Video autoplay prevented:', error);
-        });
+        } else {
+            // On mobile or slow connection, remove video to save bandwidth
+            heroVideo.remove();
+            console.log('Video disabled for mobile/slow connection optimization');
+        }
     }
 
     // ============================

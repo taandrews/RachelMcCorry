@@ -226,6 +226,23 @@ img {
     object-fit: cover;
 }
 
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Mobile/Desktop Toggle */
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -960,6 +977,15 @@ section {
 
     .hero {
         min-height: 500px;
+    }
+
+    /* Mobile optimization: Use static image instead of video */
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
     }
 
     .hero-ctas {
