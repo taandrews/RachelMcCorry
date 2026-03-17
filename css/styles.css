@@ -5,26 +5,25 @@
 /* CSS Variables - Brand Colors & Theme */
 :root {
     /* Primary Colors */
-    --sage-green: #A8B5A0;
-    --warm-sand: #E8DCC4;
+    --sage-green: #1e4d4d;
+    --warm-sand: #e8ddd0;
 
     /* Secondary Colors */
-    --terracotta: #C8997D;
-    --muted-teal: #87B5B5;
+    --terracotta: #a3522a;
+    --muted-teal: #2a6b5a;
 
     /* Neutrals */
-    --warm-white: #FAF8F5;
-    --light-grey: #E5E5E5;
-    --medium-grey: #9B9B9B;
-    --dark-grey: #4A4A4A;
+    --warm-white: #f7f3ee;
+    --light-grey: #d9d0c5;
+    --medium-grey: #8a8279;
+    --dark-grey: #2d2a26;
 
     /* Accent */
-    --sunset-coral: #E09F7D;
+    --sunset-coral: #c4653a;
 
     /* Typography */
-    --font-serif: 'Cormorant Garamond', serif;
-    --font-sans: 'Inter', sans-serif;
-    --font-script: 'Dancing Script', cursive;
+    --font-serif: 'Instrument Serif', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
 
     /* Spacing */
     --section-padding: 100px;
@@ -59,8 +58,8 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: 500;
-    line-height: 1.2;
+    font-weight: 400;
+    line-height: 1.15;
     margin-bottom: 1rem;
     color: var(--dark-grey);
 }
@@ -126,11 +125,12 @@ img {
 }
 
 .logo {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
     color: var(--sage-green);
-    letter-spacing: 0.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 }
 
 .nav-menu {
@@ -167,9 +167,12 @@ img {
 .nav-cta {
     background-color: var(--sunset-coral);
     color: white !important;
-    padding: 0.75rem 1.75rem !important;
-    border-radius: 30px;
-    font-weight: 500;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .nav-cta::after {
@@ -241,13 +244,13 @@ img {
     right: 0;
     bottom: 0;
     background: linear-gradient(
-        135deg,
-        rgba(168, 181, 160, 0.4) 0%,
-        rgba(135, 181, 181, 0.3) 50%,
-        rgba(232, 220, 196, 0.4) 100%
+        180deg,
+        rgba(30, 77, 77, 0.25) 0%,
+        rgba(30, 77, 77, 0.45) 50%,
+        rgba(45, 42, 38, 0.7) 100%
     );
     z-index: 2;
-    pointer-events: none;  /* Prevents blocking interactions */
+    pointer-events: none;
 }
 
 .hero-content {
@@ -283,6 +286,19 @@ img {
     flex-wrap: wrap;
 }
 
+/* Grain Texture Overlay */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.45;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
@@ -310,15 +326,17 @@ img {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    border-radius: 30px;
-    font-weight: 500;
-    font-size: 1rem;
+    padding: 0.9rem 2.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
     text-align: center;
     cursor: pointer;
     border: 2px solid transparent;
     transition: var(--transition-smooth);
     font-family: var(--font-sans);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .btn-primary {
@@ -385,8 +403,11 @@ section {
 
 .section-label {
     display: inline-block;
-    font-family: var(--font-script);
-    font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     color: var(--sunset-coral);
     margin-bottom: 1rem;
 }
@@ -458,7 +479,7 @@ section {
 
 /* Services Overview */
 .services-overview {
-    background: linear-gradient(135deg, var(--warm-sand) 0%, var(--warm-white) 100%);
+    background: linear-gradient(160deg, var(--warm-sand) 0%, var(--warm-white) 100%);
 }
 
 .services-grid {
@@ -598,8 +619,20 @@ section {
 
 /* Testimonials */
 .testimonials {
-    background: linear-gradient(135deg, var(--muted-teal) 0%, var(--sage-green) 100%);
+    position: relative;
+    background: linear-gradient(170deg, var(--muted-teal) 0%, var(--sage-green) 100%);
     color: white;
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
 }
 
 .testimonials .section-label {
@@ -673,9 +706,21 @@ section {
 
 /* Final CTA */
 .final-cta {
-    background: linear-gradient(135deg, var(--warm-sand) 0%, var(--terracotta) 100%);
+    position: relative;
+    background: linear-gradient(200deg, var(--warm-sand) 0%, var(--sunset-coral) 60%, var(--terracotta) 100%);
     text-align: center;
     padding: 120px 0;
+}
+
+.final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
 }
 
 .cta-content h2 {
@@ -991,7 +1036,11 @@ section {
     }
 
     .hero-overlay {
-        background: rgba(0, 0, 0, 0.6);  /* Increased to 60% for better text contrast */
+        background: linear-gradient(
+            180deg,
+            rgba(30, 77, 77, 0.4) 0%,
+            rgba(45, 42, 38, 0.75) 100%
+        );
     }
 
     .hero-content {

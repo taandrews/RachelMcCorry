@@ -409,27 +409,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', debouncedScroll);
 
-    // ============================
-    // Console Message
-    // ============================
-    console.log('%c🧘 Yoga x Rachel McCorry', 'font-size: 20px; color: #A8B5A0; font-weight: bold;');
-    console.log('%cFind your flow in Miami\'s most beautiful neighborhoods', 'font-size: 12px; color: #9B9B9B;');
-    console.log('%cWebsite built with ❤️ for mindful movement', 'font-size: 11px; color: #E09F7D;');
 });
-
-// ============================
-// Service Worker Registration (Optional - for PWA)
-// ============================
-/*
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('ServiceWorker registered:', registration);
-            })
-            .catch(error => {
-                console.log('ServiceWorker registration failed:', error);
-            });
-    });
-}
-*/

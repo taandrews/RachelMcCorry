@@ -55,7 +55,7 @@
 
 /* Credentials Section */
 .credentials-section {
-    background: linear-gradient(135deg, var(--warm-sand) 0%, var(--warm-white) 100%);
+    background: linear-gradient(175deg, var(--warm-sand) 0%, var(--warm-white) 100%);
     padding: 100px 0;
 }
 
@@ -157,8 +157,20 @@
 
 /* Why Miami Section */
 .why-miami-section {
-    background: linear-gradient(135deg, var(--muted-teal) 0%, var(--sage-green) 100%);
+    position: relative;
+    background: linear-gradient(170deg, var(--muted-teal) 0%, var(--sage-green) 100%);
     padding: 100px 0;
+}
+
+.why-miami-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
 }
 
 .why-miami-grid {
@@ -194,9 +206,21 @@
 
 /* About CTA Section */
 .about-cta {
-    background: linear-gradient(135deg, var(--warm-sand) 0%, var(--terracotta) 100%);
+    position: relative;
+    background: linear-gradient(200deg, var(--warm-sand) 0%, var(--sunset-coral) 60%, var(--terracotta) 100%);
     text-align: center;
     padding: 100px 0;
+}
+
+.about-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
 }
 
 .about-cta .cta-content h2 {

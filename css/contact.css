@@ -324,7 +324,7 @@
 
 /* FAQ Quick Section */
 .faq-quick {
-    background: linear-gradient(135deg, var(--warm-sand) 0%, var(--warm-white) 100%);
+    background: linear-gradient(175deg, var(--warm-sand) 0%, var(--warm-white) 100%);
     padding: 80px 0;
 }
 
