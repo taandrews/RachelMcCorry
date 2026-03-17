@@ -3,8 +3,8 @@
 /* Page Hero */
 .page-hero {
     position: relative;
-    padding: 180px 0 100px;
-    background: url('../images/hero-about.jpg') center/cover no-repeat;
+    padding: 250px 0 170px;
+    background: url('../images/hero-about.jpg') center top/cover no-repeat;
     text-align: center;
     color: white;
 }
