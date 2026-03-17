@@ -275,7 +275,7 @@
 
 @media (max-width: 768px) {
     .page-hero {
-        padding: 140px 0 80px;
+        padding: 200px 0 120px;
     }
 
     .credentials-grid {
@@ -293,7 +293,7 @@
 
 @media (max-width: 480px) {
     .page-hero {
-        padding: 120px 0 60px;
+        padding: 180px 0 100px;
     }
 
     .credential-card {
