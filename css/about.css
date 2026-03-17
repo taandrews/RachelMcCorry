@@ -2,10 +2,23 @@
 
 /* Page Hero */
 .page-hero {
+    position: relative;
     padding: 180px 0 100px;
-    background: linear-gradient(135deg, var(--sage-green) 0%, var(--muted-teal) 100%);
+    background: url('../images/hero-about.jpg') center/cover no-repeat;
     text-align: center;
     color: white;
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(30, 77, 77, 0.6) 0%, rgba(45, 42, 38, 0.75) 100%);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .page-hero-content h1 {
