@@ -1036,11 +1036,11 @@ section {
     }
 
     .hero-video {
-        display: none;
-    }
-
-    .hero-video-container {
-        background: url('../images/pexels-elly-fairytale-3822864.jpg') center/cover no-repeat;
+        object-fit: initial;
+        width: auto;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .hero-overlay {
