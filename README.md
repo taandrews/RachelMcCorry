@@ -1,6 +1,6 @@
-# Yoga x Rachel McCorry - Website Documentation
+# Solana Yoga - Website Documentation
 
-A premium, custom-designed website for Rachel McCorry's yoga instruction services in Miami.
+A premium, custom-designed website for Solana Yoga's instruction services in Miami.
 
 ## 🎨 Brand Identity
 
@@ -30,10 +30,10 @@ A premium, custom-designed website for Rachel McCorry's yoga instruction service
 ## 📁 File Structure
 
 ```
-Rachel McCorry/
+SolanaYoga/
 │
 ├── index.html                 # Homepage with hero video
-├── about.html                 # Rachel's story and credentials
+├── about.html                 # About page and credentials
 ├── services.html              # Service offerings
 ├── service-areas.html         # Miami neighborhood coverage
 ├── contact.html               # Booking and contact forms
@@ -61,7 +61,7 @@ Rachel McCorry/
 
 ### 1. Homepage (index.html)
 - Full-screen video hero section with the provided hero.mp4
-- About Rachel brief introduction
+- About section brief introduction
 - Services overview cards
 - Service areas preview
 - Testimonials slider with infinite scroll
@@ -69,7 +69,7 @@ Rachel McCorry/
 - Responsive navigation with mobile menu
 
 ### 2. About Page (about.html)
-- Rachel's complete story and journey
+- Complete story and journey
 - Credentials and certifications grid
 - Teaching philosophy (6 core principles)
 - Why Miami section
@@ -211,9 +211,9 @@ fetch('https://your-backend.com/api/contact', {
 ### Updating Content
 
 1. **Change Contact Information:**
-   - Update email: Search for `rachel@yogaxrachelmccorry.com`
+   - Update email: Search for `hello@solanayoga.com`
    - Update phone: Search for `(305) 555-1234`
-   - Update Instagram: Search for `@rachelmccorryoga`
+   - Update Instagram: Search for `@solanayoga`
 
 2. **Update Images:**
    - Replace images in `/images` folder
@@ -315,12 +315,12 @@ For questions or issues with the website:
 
 ## 📝 License
 
-This website is custom-built for Yoga x Rachel McCorry.
-All rights reserved © 2024 Yoga x Rachel McCorry
+This website is custom-built for Solana Yoga.
+All rights reserved © 2024 Solana Yoga
 
 ---
 
 **Built with care for mindful movement and authentic connection.**
 
 Last Updated: November 2024
-# RachelMcCorry
+# SolanaYoga

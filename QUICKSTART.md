@@ -1,4 +1,4 @@
-# 🚀 Quick Start Guide - Yoga x Rachel McCorry Website
+# 🚀 Quick Start Guide - Solana Yoga Website
 
 ## What You Have
 
@@ -18,9 +18,9 @@ A complete, production-ready website with:
 **Search and replace these across all HTML files:**
 
 ```
-rachel@yogaxrachelmccorry.com  →  YOUR_EMAIL@domain.com
+hello@solanayoga.com           →  YOUR_EMAIL@domain.com
 (305) 555-1234                 →  YOUR_PHONE_NUMBER
-@rachelmccorryoga              →  @YOUR_INSTAGRAM
+@solanayoga                    →  @YOUR_INSTAGRAM
 ```
 
 **Files to update:**
@@ -44,7 +44,7 @@ rachel@yogaxrachelmccorry.com  →  YOUR_EMAIL@domain.com
 
 1. Go to [netlify.com](https://netlify.com)
 2. Sign up for free account
-3. Drag and drop your entire "Rachel McCorry" folder
+3. Drag and drop your entire "SolanaYoga" folder
 4. Site goes live immediately!
 5. Get free HTTPS and custom domain support
 
@@ -139,7 +139,7 @@ Edit `index.html` around line 180:
 | Page | Purpose | Key Features |
 |------|---------|--------------|
 | **index.html** | Homepage | Video hero, services overview, testimonials |
-| **about.html** | About Rachel | Story, credentials, philosophy |
+| **about.html** | About | Story, credentials, philosophy |
 | **services.html** | Services | Private, group, corporate offerings |
 | **service-areas.html** | Locations | Miami neighborhood coverage |
 | **contact.html** | Contact/Booking | Form, contact info, FAQ |
