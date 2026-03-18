@@ -36,17 +36,17 @@
 .page-hero-content h1 {
     color: white;
     margin-bottom: 1rem;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.7), 0 2px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .page-hero-content .section-label {
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.7), 0 2px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .page-hero-content p {
     font-size: 1.25rem;
     color: white;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.7), 0 2px 30px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 /* Service Detail Sections */
